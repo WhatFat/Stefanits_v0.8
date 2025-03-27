@@ -61,72 +61,72 @@ function toggleContactDetails(employee) {
 const projects = [
     {
         name: "Újhartyán",
-        images: ["pics/ujhartyan1.jpg","pics/ujhartyan2.jpg","pics/ujhartyan3.jpg","pics/ujhartyan4.jpg","pics/ujhartyan5.jpg","pics/ujhartyan6.jpg"],
+        images: ["pics/ujhartyan1.webp","pics/ujhartyan2.webp","pics/ujhartyan3.webp","pics/ujhartyan4.webp","pics/ujhartyan5.webp","pics/ujhartyan6.webp"],
         description: "Projekt:<br>Hely: Újhartyán<br>Munkanem:<br>"
     },
     {
         name: "Mercedes-Akcionáló Csarnok",
-        images: ["pics/mercedes1.jpg","pics/mercedes2.jpg","pics/mercedes3.jpg","pics/mercedes4.jpg"],
+        images: ["pics/mercedes1.webp","pics/mercedes2.webp","pics/mercedes3.webp","pics/mercedes4.webp"],
         description: "Projekt:<br>Hely: Kecskemét<br>Munkanem:<br>"
     },
     {
         name: "Paks Energy",
-        images: ["pics/paks1.jpg","pics/paks2.jpg","pics/paks3.jpg","pics/paks4.jpg","pics/paks5.jpg","pics/paks6.jpg"],
+        images: ["pics/paks1.webp","pics/paks2.webp","pics/paks3.webp","pics/paks4.webp","pics/paks5.webp","pics/paks6.webp"],
         description: "Projekt:<br>Hely: Paks<br>Munkanem:<br>"
     },
     {
         name: "Alcsútdoboz",
-        images: ["pics/alcsutdoboz1.jpg", "pics/alcsutdoboz2.jpg", "pics/alcsutdoboz3.jpg"],
+        images: ["pics/alcsutdoboz1.webp", "pics/alcsutdoboz2.webp", "pics/alcsutdoboz3.webp"],
         description: "Projekt 4 a legújabb vállalkozásunk. Ezek a fő célkitűzései és jellemzői."
     },
     {
         name: "Zalaegerszeg",
-        images: ["pics/zalaegerszeg1.jpg", "pics/zalaegerszeg2.jpg", "pics/zalaegerszeg3.jpg"],
+        images: ["pics/zalaegerszeg1.webp", "pics/zalaegerszeg2.webp", "pics/zalaegerszeg3.webp"],
         description: "Projekt 5 a legújabb vállalkozásunk. Ezek a fő célkitűzései és jellemzői."
     },
     {
         name: "VGP Csarnok",
-        images: ["pics/vgp1.jpg","pics/vgp2.jpg"],
+        images: ["pics/vgp1.webp","pics/vgp2.webp"],
         description: "Projekt: <br>Hely: Győr<br>Munkanem: Fit-out munkák- Belsőépítészeti generál kivitelezés<br>"
     }, 
     {
         name: "Richter",
-        images: ["pics/richter1.jpg","pics/richter2.jpg","pics/richter3.jpg","pics/richter4.jpg","pics/richter5.jpg"],
+        images: ["pics/richter1.webp","pics/richter2.webp","pics/richter3.webp","pics/richter4.webp","pics/richter5.webp"],
         description: "Projekt: <br>Hely: Budapest<br>Munkanem: Szárazépítési és Felületképzési munkák<br>"
     },  
     {
         name: "Átrium",
-        images: ["pics/atrium1.jpg","pics/atrium2.jpg","pics/atrium3.jpg"],
+        images: ["pics/atrium1.webp","pics/atrium2.webp","pics/atrium3.webp"],
         description: "Projekt: <br>Hely: Budapest<br>Munkanem: Szárazépítési és Felületképzési munkák<br>"
     }, 
     {
         name: "Medicover",
-        images: ["pics/medicover1.jpg","pics/medicover2.jpg","pics/medicover3.jpg","pics/medicover4.jpg"],
+        images: ["pics/medicover1.webp","pics/medicover2.webp","pics/medicover3.webp","pics/medicover4.webp"],
         description: "Hely: Budapest<br>Munkanem: Szárazépítési és Felületképzési munkák<br>"
     },
     {
         name: "Kekszgyár",
-        images: ["pics/kekszgyar1.jpg","pics/kekszgyar2.jpg","pics/kekszgyar3.jpg","pics/kekszgyar4.jpg"],
+        images: ["pics/kekszgyar1.webp","pics/kekszgyar2.webp","pics/kekszgyar3.webp","pics/kekszgyar4.webp"],
         description: "Projekt: Győri Kekszgyár volt épületének felújítása keretében a Széchenyi István Egyetem Tudományos és Innovációs Park kiépítése, valamint új Művészeti kar oktatási tereinek kialakítása<br>Hely: Győr<br>Munkanem: Szárazépítési munkák, Külső szerelt falak komplett kivitelezése<br>"
     },
     {
         name: "Krisztina Pláza",
-        images: ["pics/krisztina1.jpg","pics/krisztina2.jpg","pics/krisztina3.jpg"],
+        images: ["pics/krisztina1.webp","pics/krisztina2.webp","pics/krisztina3.webp"],
         description: "Projekt: Krisztina Pláza Irodaszint kialakítás<br>Hely: Budapest<br>Munkanem: Szárazépítési és Felületképzési munkák<br>"
     }, 
     {
         name: "Intercity Hotel",
-        images: ["pics/Intercity1.jpg","pics/Intercity2.jpg","pics/Intercity3.jpg","pics/Intercity4.jpg","pics/Intercity5.jpg","pics/Intercity6.jpg","pics/Intercity7.jpg"],
+        images: ["pics/Intercity1.webp","pics/Intercity2.webp","pics/Intercity3.webp","pics/Intercity4.webp","pics/Intercity5.webp","pics/Intercity6.webp","pics/Intercity7.webp"],
         description: "Projekt: Intercity Hotel épület 1-7. emeleteinek szárazépítési kivitelezési munkái<br>Hely: Budapest<br>Munkanem: Szárazépítészeti kivitelezési munkák, beleértve gipszkarton válaszfalak, álmennyezetek és egyéb belsőépítészeti szerkezetek kialakítását.<br>"
     },    
     {
         name: "Tata Interspar",
-        images: ["pics/interspar1.jpg","pics/interspar2.jpg","pics/interspar3.jpg","pics/interspar4.jpg"],
+        images: ["pics/interspar1.webp","pics/interspar2.webp","pics/interspar3.webp","pics/interspar4.webp"],
         description: "Projekt:<br>Hely: Tata<br>Munkanem: Szárazépítészeti kivitelezési munkák, beleértve gipszkarton válaszfalak, álmennyezetek és egyéb belsőépítészeti szerkezetek kialakítását.<br>"
     },  
     {
         name: "Sukoró KKS",
-        images: ["pics/sukoro1.jpg","pics/sukoro2.jpg","pics/sukoro3.jpg","pics/sukoro4.jpg","pics/sukoro5.jpg","pics/sukoro6.jpg"],
+        images: ["pics/sukoro1.webp","pics/sukoro2.webp","pics/sukoro3.webp","pics/sukoro4.webp","pics/sukoro5.webp","pics/sukoro6.webp"],
         description: "Projekt: Kovács Katalin Nemzeti Kajak-Kenu Sportakadémia tervezése és kivitelezése<br>Hely: Sukoró<br>Munkanem: Szárazépítészeti kivitelezési munkák, beleértve gipszkarton válaszfalak, álmennyezetek és egyéb belsőépítészeti szerkezetek kialakítását.<br>"
     },
 ];
