@@ -207,3 +207,20 @@ document.getElementById('tovabbGomb').addEventListener('click', function(e) {
         document.getElementById('tovabbGomb').style.display = 'inline-block';
     }
 });
+
+function openPrivacyPolicy(event) {
+    event.preventDefault();
+    document.getElementById('privacyPolicyModal').style.display = 'block';
+}
+
+function closePrivacyPolicy() {
+    document.getElementById('privacyPolicyModal').style.display = 'none';
+}
+
+// Opcionális: modal zárás ha háttérre kattintasz
+window.onclick = function(event) {
+    const modal = document.getElementById('privacyPolicyModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
