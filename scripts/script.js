@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
     });
 
-    document.getElementById("Logo").addEventListener("click", function() {
+        document.getElementById("Logo").addEventListener("click", function() {
         window.location.href = "https://wwww.stefanitskft.hu";
     });
 
@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = "https://www.facebook.com/stefanitskft";
     });
 
+        document.getElementById("instagram-btn").addEventListener("click", function() {
+        window.location.href = "https://www.instagram.com/stefanitskft/";
+    });
+    
     const links = document.querySelectorAll('.header .navbar a');
 
     links.forEach(function(link) {
