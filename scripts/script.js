@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
         document.getElementById("instagram-btn").addEventListener("click", function() {
-        window.location.href = "https://www.instagram.com/stefanitskft/";
+        window.location.href = "https://www.instagram.com/stefanitskft";
     });
     
     const links = document.querySelectorAll('.header .navbar a');
