@@ -517,18 +517,34 @@
         </button>
       </div>
     </div>
-
+    
     <script>
       function acceptCookies() {
         document.getElementById("cookie-banner").style.display = "none";
-        localStorage.setItem("cookieConsent", "true");
-        // Itt helyezheted el a nem kötelező sütik (pl. Google Analytics) inicializálását is
+    
+        // Csak ekkor töltjük be a Google Analytics kódot
+        loadGoogleAnalytics();
+      }
+    
+      function loadGoogleAnalytics() {
+        // Google Analytics script betöltése
+        const gaScript = document.createElement("script");
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"; // <- ide írd a saját azonosítódat
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+    
+        gaScript.onload = function () {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX'); // <- itt is
+        };
       }
     
       window.onload = function() {
-        if (!localStorage.getItem("cookieConsent")) {
-          document.getElementById("cookie-banner").style.display = "block";
-        }
+        // Minden betöltésnél mutatjuk a bannert
+        document.getElementById("cookie-banner").style.display = "block";
       };
     </script>
 </body>
