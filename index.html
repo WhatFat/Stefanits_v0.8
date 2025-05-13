@@ -10,13 +10,19 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="scripts/script.js" defer></script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F02DYQBSJP"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      if (localStorage.getItem("cookieConsent") === "true") {
+        // Itt mehet a Google Analytics script betöltése
+        let gaScript = document.createElement("script");
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-F02DYQBSJP";
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
     
-      gtag('config', 'G-F02DYQBSJP');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-F02DYQBSJP');
+      }
     </script>
 </head>
 
@@ -502,6 +508,28 @@
             Weboldalt készítette: Herák Mihály
         </div>
     </div>
-</footer>   
+</footer>
+    <div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #222; color: #fff; padding: 15px; display: none; z-index: 1000; font-family: sans-serif;">
+      <div style="max-width: 960px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+        <span>Ez a weboldal sütiket használ a jobb felhasználói élmény érdekében.</span>
+        <button onclick="acceptCookies()" style="margin-top: 10px; background: #4CAF50; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 4px;">
+          Elfogadom
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function acceptCookies() {
+        document.getElementById("cookie-banner").style.display = "none";
+        localStorage.setItem("cookieConsent", "true");
+        // Itt helyezheted el a nem kötelező sütik (pl. Google Analytics) inicializálását is
+      }
+    
+      window.onload = function() {
+        if (!localStorage.getItem("cookieConsent")) {
+          document.getElementById("cookie-banner").style.display = "block";
+        }
+      };
+    </script>
 </body>
 </html>
