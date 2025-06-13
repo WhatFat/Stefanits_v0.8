@@ -14,14 +14,14 @@
       if (localStorage.getItem("cookieConsent") === "true") {
         // Itt mehet a Google Analytics script betöltése
         let gaScript = document.createElement("script");
-        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-2PT5Q1GYJD";
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-4EWVZ9RDM3";
         gaScript.async = true;
         document.head.appendChild(gaScript);
     
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-2PT5Q1GYJD');
+        gtag('config', 'G-4EWVZ9RDM3');
       }
     </script>
 </head>
@@ -529,7 +529,7 @@
       function loadGoogleAnalytics() {
         // Google Analytics script betöltése
         const gaScript = document.createElement("script");
-        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-2PT5Q1GYJD"; // <- ide írd a saját azonosítódat
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-4EWVZ9RDM3"; 
         gaScript.async = true;
         document.head.appendChild(gaScript);
     
@@ -538,7 +538,7 @@
           function gtag(){ dataLayer.push(arguments); }
           window.gtag = gtag;
           gtag('js', new Date());
-          gtag('config', 'G-2PT5Q1GYJD'); // <- itt is
+          gtag('config', 'G-4EWVZ9RDM3'); 
         };
       }
     
