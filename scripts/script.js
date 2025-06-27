@@ -212,6 +212,19 @@ document.getElementById('tovabbGomb').addEventListener('click', function(e) {
     }
 });
 
+      if (localStorage.getItem("cookieConsent") === "true") {
+        // Itt mehet a Google Analytics script betöltése
+        let gaScript = document.createElement("script");
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-4EWVZ9RDM3";
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+    
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4EWVZ9RDM3');
+      };
+
       function acceptCookies() {
         document.getElementById("cookie-banner").style.display = "none";
     
