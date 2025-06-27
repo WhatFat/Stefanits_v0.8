@@ -9,21 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="scripts/script.js" defer></script>
-    <!-- Google tag (gtag.js) -->
-    <script>
-      if (localStorage.getItem("cookieConsent") === "true") {
-        // Itt mehet a Google Analytics script betöltése
-        let gaScript = document.createElement("script");
-        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-4EWVZ9RDM3";
-        gaScript.async = true;
-        document.head.appendChild(gaScript);
-    
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-4EWVZ9RDM3');
-      }
-    </script>
 </head>
 
 <body>
@@ -517,35 +502,5 @@
         </button>
       </div>
     </div>
-    
-    <script>
-      function acceptCookies() {
-        document.getElementById("cookie-banner").style.display = "none";
-    
-        // Csak ekkor töltjük be a Google Analytics kódot
-        loadGoogleAnalytics();
-      }
-    
-      function loadGoogleAnalytics() {
-        // Google Analytics script betöltése
-        const gaScript = document.createElement("script");
-        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-4EWVZ9RDM3"; 
-        gaScript.async = true;
-        document.head.appendChild(gaScript);
-    
-        gaScript.onload = function () {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){ dataLayer.push(arguments); }
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', 'G-4EWVZ9RDM3'); 
-        };
-      }
-    
-      window.onload = function() {
-        // Minden betöltésnél mutatjuk a bannert
-        document.getElementById("cookie-banner").style.display = "block";
-      };
-    </script>
 </body>
 </html>
