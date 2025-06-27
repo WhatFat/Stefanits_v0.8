@@ -211,3 +211,33 @@ document.getElementById('tovabbGomb').addEventListener('click', function(e) {
         document.getElementById('tovabbGomb').style.display = 'inline-block';
     }
 });
+
+      function acceptCookies() {
+        document.getElementById("cookie-banner").style.display = "none";
+    
+        // Csak ekkor töltjük be a Google Analytics kódot
+        loadGoogleAnalytics();
+      }
+    
+      function loadGoogleAnalytics() {
+        // Google Analytics script betöltése
+        const gaScript = document.createElement("script");
+        gaScript.src = "https://www.googletagmanager.com/gtag/js?id=G-4EWVZ9RDM3"; 
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+    
+        gaScript.onload = function () {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', 'G-4EWVZ9RDM3'); 
+        };
+      }
+    
+      window.onload = function() {
+        // Minden betöltésnél mutatjuk a bannert
+        document.getElementById("cookie-banner").style.display = "block";
+      };
+
+
